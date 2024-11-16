@@ -1,0 +1,28 @@
+<!-- views/carParts.ejs - rev. 01 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Parts</title>
+</head>
+<body>
+  <h1>Car Parts Inventory</h1>
+
+  <!-- List all car parts -->
+  <% if (parts && parts.length > 0) { %>
+    <ul>
+      <% parts.forEach(part => { %>
+        <li><%= part.part %></li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No car parts available.</p>
+  <% } %>
+
+  <!-- Navigation Links -->
+  <a href="/carParts/create">Add New Car Part</a><br>
+  <a href="/">Back to Home</a>
+</body>
+</html>

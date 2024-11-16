@@ -1,0 +1,23 @@
+<!-- views/carPartsCreate.ejs - rev. 00 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Car Part</title>
+</head>
+<body>
+  <h1>Create a New Car Part</h1>
+
+  <!-- Form to create a new car part -->
+  <form action="/carParts/create" method="POST">
+    <label for="part">Car Part:</label>
+    <input type="text" id="part" name="part" required>
+    <button type="submit">Add Car Part</button>
+  </form>
+
+  <!-- Navigation links -->
+  <a href="/carParts">Back to Car Parts</a> | <a href="/">Home</a>
+</body>
+</html>

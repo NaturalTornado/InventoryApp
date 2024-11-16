@@ -1,0 +1,23 @@
+<!-- views/groceriesCreate.ejs - rev. 00 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Grocery Item</title>
+</head>
+<body>
+  <h1>Create a New Grocery Item</h1>
+
+  <!-- Form to create a new grocery item -->
+  <form action="/groceries/create" method="POST">
+    <label for="item">Grocery Item:</label>
+    <input type="text" id="item" name="item" required>
+    <button type="submit">Add Item</button>
+  </form>
+
+  <!-- Navigation links -->
+  <a href="/groceries">Back to Groceries</a> | <a href="/">Home</a>
+</body>
+</html>

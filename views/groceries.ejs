@@ -1,0 +1,28 @@
+<!-- views/groceries.ejs - rev. 01 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groceries</title>
+</head>
+<body>
+  <h1>Grocery Inventory</h1>
+
+  <!-- List all grocery items -->
+  <% if (groceries && groceries.length > 0) { %>
+    <ul>
+      <% groceries.forEach(item => { %>
+        <li><%= item.item %></li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No grocery items available.</p>
+  <% } %>
+
+  <!-- Navigation Links -->
+  <a href="/groceries/create">Add New Grocery Item</a><br>
+  <a href="/">Back to Home</a>
+</body>
+</html>
